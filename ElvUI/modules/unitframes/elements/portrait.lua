@@ -113,7 +113,10 @@ function UF:PortraitUpdate()
 
 	if(self:GetObjectType() ~= "Texture") then
 		local model = self:GetModel();
-		if(model and model.find and model:find("worgenmale")) then
+		if(model and model.find and model:find("dwarfmale.m2"))
+		or(model and model.find and model:find("humanfemale.m2")) 
+		or(model and model.find and model:find("scourgemale.m2"))
+		or(model and model.find and model:find("scourgefemale.m2"))
 			self:SetCamera(1)
 		end
 	end
